@@ -1,13 +1,2 @@
 #!/bin/bash
-x=$(xbacklight | grep -o -P '(?<=).*(?=\.)')
-
-# this for i3blocks
-case $BLOCK_BUTTON in
-  4) xbacklight -inc 5;;
-  5) xbacklight -dec 5;;
-esac
-
-x=$(xbacklight | grep -o -P '(?<=).*(?=\.)')
-
-echo "$x%"
-
+echo $(xbacklight | grep -o -P '(?<=).*(?=\.)')%
