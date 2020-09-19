@@ -1,0 +1,20 @@
+xterm*color0:  #402500
+xterm*color1:  #FF9400
+xterm*color2:  #FF9400
+xterm*color3:  #FF9400
+xterm*color4:  #FF9400
+xterm*color5:  #FF9400
+xterm*color6:  #FF9400
+xterm*color7:  #FF9400
+xterm*color8:  #FF9400
+xterm*color9:  #FF9400
+xterm*color10:  #FF9400
+xterm*color11:  #FF9400
+xterm*color12:  #FF9400
+xterm*color13:  #FF9400
+xterm*color14:  #FF9400
+xterm*color15:  #FF9400
+
+xterm*background: #2B1900
+xterm*foreground: #FF9400
+xterm*cursorColor: #FF9400

@@ -1,0 +1,86 @@
+### bases ###
+set drawbox
+set color256
+
+
+
+# Delete 
+cmd Adelete ${{
+  clear
+  printf "%s\n" "$fx"
+  x=$(printf "%s\n" "$fs" | wc -l)
+  if [ $x -gt 1 ]; then
+    printf "$x items will be deleted [y/n] : "
+  else
+    printf "1 item will be deleted [y/n] : "
+  fi
+  read ans
+  if [ $ans = "y" ]; then
+    IFS="`printf '\n\t'`"; rm $fx || IFS="`printf '\n\t'`";  rm -r "$fx"
+    notify-send " Done "
+  fi
+  clear
+}} 
+
+# copy to 
+cmd Acopyto ${{
+  clear
+  x=true
+  while [ x ]
+  do
+    printf "%s\n" "copy $fx to : "
+    printf ""
+    read path
+    if [ ${path:0:2} = "~/" ]; then
+      path=$(echo "$HOME/${path:2}")
+    fi
+    if [ $path = "&" ];then 
+      break;
+    fi
+    IFS="`printf '\n\t'`"; cp $fx "$path" && notify-send "Done" && break  || IFS="`printf '\n\t'`"; cp -r $fx "$path" && notify-send " Done " && break  || notify-send " error "
+  done 
+  clear
+}}
+
+# move to
+cmd Amoveto ${{
+  clear
+  x=$(printf "%s\n" "$fs" | wc -l)
+  if [ $x -gt 1 ]; then
+    printf "%s\n" "move $x item to : "
+    read path
+    IFS="`printf '\n\t'`"; mv $fx "$path" && notify-send "Done" || notify-send "Error"
+  else
+    printf "%s\n" "move $x items to : "
+    read path
+    IFS="`printf '\n\t'`"; mv $fx "$path" && notify-send "Done" || notify-send "Error"
+  fi
+  clear  
+}}
+
+cmd Awallpaper ${{
+  xwallpaper --zoom $fx
+}}
+
+# edite text
+cmd nvim ${{
+  nvim "$fx"
+}}
+
+
+# maping
+map H cd ~
+
+map <space> toggle
+#map <c-j> :toggle;down
+#map <c-k> :toggle;up
+map J :toggle;down
+map K :toggle;up
+
+map D Adelete
+map C Acopyto
+map M Amoveto
+
+map V nvim
+map R Awallpaper
+map . set hidden!

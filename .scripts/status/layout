@@ -1,0 +1,11 @@
+#!/bin/bash
+x=$($HOME/.scripts/status/xkblayout-state print "%n")
+x=${x:0:2}
+
+if [ $x = "Fr" ]; then
+  x="fr"
+else
+  x="ar"
+fi
+
+echo $x

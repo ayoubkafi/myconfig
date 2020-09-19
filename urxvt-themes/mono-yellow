@@ -1,0 +1,20 @@
+URxvt.color0:  #403500
+URxvt.color1:  #FFD300
+URxvt.color2:  #FFD300
+URxvt.color3:  #FFD300
+URxvt.color4:  #FFD300
+URxvt.color5:  #FFD300
+URxvt.color6:  #FFD300
+URxvt.color7:  #FFD300
+URxvt.color8:  #FFD300
+URxvt.color9:  #FFD300
+URxvt.color10:  #FFD300
+URxvt.color11:  #FFD300
+URxvt.color12:  #FFD300
+URxvt.color13:  #FFD300
+URxvt.color14:  #FFD300
+URxvt.color15:  #FFD300
+
+URxvt.background: #2B2400
+URxvt.foreground: #FFD300
+URxvt.cursorColor: #FFD300

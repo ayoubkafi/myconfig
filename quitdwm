@@ -1,0 +1,2 @@
+#!/bin/bash
+[ $(echo -e "no\nyes" | dmenu -i -p "Do you want to quit dwm ?") == "yes" ] && killall dwm

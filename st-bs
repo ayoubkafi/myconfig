@@ -1,0 +1,3 @@
+#!/bin/bash
+cp ~/.S/bspwm/.xinitrc ~/.xinitrc
+startx

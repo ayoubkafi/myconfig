@@ -1,0 +1,20 @@
+xterm*color0:  #401200
+xterm*color1:  #FF3600
+xterm*color2:  #FF3600
+xterm*color3:  #FF3600
+xterm*color4:  #FF3600
+xterm*color5:  #FF3600
+xterm*color6:  #FF3600
+xterm*color7:  #FF3600
+xterm*color8:  #FF3600
+xterm*color9:  #FF3600
+xterm*color10:  #FF3600
+xterm*color11:  #FF3600
+xterm*color12:  #FF3600
+xterm*color13:  #FF3600
+xterm*color14:  #FF3600
+xterm*color15:  #FF3600
+
+xterm*background: #2B0C00
+xterm*foreground: #FF3600
+xterm*cursorColor: #FF3600

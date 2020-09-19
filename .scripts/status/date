@@ -1,0 +1,17 @@
+#!/bin/bash
+
+d=$(date "+%d/%m/%Y")
+t=$(echo $(date | awk '{print $1}') $(date "+%I:%M"))
+
+date=$t
+# this for i3blocks 
+case $BLOCK_BUTTON in
+ 1) ;;
+ 2) ;;
+ 4) date=$d ;;
+ 5) date=$t ;;
+ 3) ;;
+ 6) ;;
+esac
+
+echo $date

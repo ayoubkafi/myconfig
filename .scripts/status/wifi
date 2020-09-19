@@ -1,0 +1,17 @@
+#!/bin/bash
+x=$(iwconfig | grep "wlo1" | awk '{print $4}' | grep -o -P '(?<=").*(?=")')
+z=${#x}
+
+#if [ $z -lt 1 ]; then
+#  x=""
+#else
+#  x=" $x"
+#fi
+
+if [ $z -lt 1 ]; then
+  x="-"
+else
+  x="+"
+fi
+
+echo $x

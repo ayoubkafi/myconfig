@@ -1,0 +1,25 @@
+! xterm
+
+xterm*faceName: xft:cascadiacode:style=Medium:size=12
+!xterm*faceSize: 13
+xterm*termName: xterm-256color
+! copy and past
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+
+! urxvt
+URxvt.scrollBar: false
+URxvt*imLocale: en_US.UTF-8
+! copy and past
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+! font
+URxvt.font: xft:cascadiacode:style=Medium:size=12, \
+            xft:JetBrainsMonoMediumNerdFont:style=Medium:size=11, \
+            xft:Font Awesome 5 Free:pixelsize=27:minspace=False,
+
+! sxiv
+Sxiv.background: #262626
+Sxiv.foreground: #bbbbbb
+Sxiv.font: xft:cascadiacode:style=Medium:size=12

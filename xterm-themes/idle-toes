@@ -1,0 +1,20 @@
+xterm*color0:  #323232
+xterm*color1:  #d25252
+xterm*color2:  #7fe173
+xterm*color3:  #ffc66d
+xterm*color4:  #4099ff
+xterm*color5:  #f680ff
+xterm*color6:  #bed6ff
+xterm*color7:  #eeeeec
+xterm*color8:  #535353
+xterm*color9:  #f07070
+xterm*color10:  #9dff91
+xterm*color11:  #ffe48b
+xterm*color12:  #5eb7f7
+xterm*color13:  #ff9dff
+xterm*color14:  #dcf4ff
+xterm*color15:  #ffffff
+
+xterm*background: #323232
+xterm*foreground: #ffffff
+xterm*cursorColor: #ffffff

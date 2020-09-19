@@ -1,0 +1,20 @@
+URxvt.color0:  #003340
+URxvt.color1:  #00CCFF
+URxvt.color2:  #00CCFF
+URxvt.color3:  #00CCFF
+URxvt.color4:  #00CCFF
+URxvt.color5:  #00CCFF
+URxvt.color6:  #00CCFF
+URxvt.color7:  #00CCFF
+URxvt.color8:  #00CCFF
+URxvt.color9:  #00CCFF
+URxvt.color10:  #00CCFF
+URxvt.color11:  #00CCFF
+URxvt.color12:  #00CCFF
+URxvt.color13:  #00CCFF
+URxvt.color14:  #00CCFF
+URxvt.color15:  #00CCFF
+
+URxvt.background: #00222B
+URxvt.foreground: #00CCFF
+URxvt.cursorColor: #00CCFF

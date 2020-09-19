@@ -1,0 +1,20 @@
+URxvt.color0:  #EEEEEE
+URxvt.color1:  #AF0000
+URxvt.color2:  #008700
+URxvt.color3:  #5F8700
+URxvt.color4:  #0087AF
+URxvt.color5:  #878787
+URxvt.color6:  #005F87
+URxvt.color7:  #444444
+URxvt.color8:  #BCBCBC
+URxvt.color9:  #D70000
+URxvt.color10:  #D70087
+URxvt.color11:  #8700AF
+URxvt.color12:  #D75F00
+URxvt.color13:  #D75F00
+URxvt.color14:  #005FAF
+URxvt.color15:  #005F87
+
+URxvt.background: #EEEEEE
+URxvt.foreground: #444444
+URxvt.cursorColor: #444444

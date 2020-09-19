@@ -1,0 +1,20 @@
+URxvt.color0:  #401200
+URxvt.color1:  #FF3600
+URxvt.color2:  #FF3600
+URxvt.color3:  #FF3600
+URxvt.color4:  #FF3600
+URxvt.color5:  #FF3600
+URxvt.color6:  #FF3600
+URxvt.color7:  #FF3600
+URxvt.color8:  #FF3600
+URxvt.color9:  #FF3600
+URxvt.color10:  #FF3600
+URxvt.color11:  #FF3600
+URxvt.color12:  #FF3600
+URxvt.color13:  #FF3600
+URxvt.color14:  #FF3600
+URxvt.color15:  #FF3600
+
+URxvt.background: #2B0C00
+URxvt.foreground: #FF3600
+URxvt.cursorColor: #FF3600

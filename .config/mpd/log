@@ -1,0 +1,67 @@
+Sep 18 14:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:17 : client: [0] opened from [::1]:49232
+Sep 18 14:17 : player: played "Black Clover Ending 5.m4a"
+Sep 18 14:21 : client: [0] closed
+Sep 18 14:21 : client: [1] opened from [::1]:49254
+Sep 18 14:22 : player: played "World Trigger Opening 1.m4a"
+Sep 18 14:23 : client: [1] closed
+Sep 18 14:23 : client: [2] opened from [::1]:49260
+Sep 18 14:23 : client: [2] closed
+Sep 18 14:23 : player: played "Black Clover Ending 3.m4a"
+Sep 18 14:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:23 : client: [0] opened from [::1]:49262
+Sep 18 14:26 : client: [0] closed
+Sep 18 14:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:26 : client: [1] opened from [::1]:49298
+Sep 18 14:26 : client: [1] closed
+Sep 18 14:26 : player: played "Black Clover Ending 6.m4a"
+Sep 18 14:26 : player: played "Black Clover Ending 6.m4a"
+Sep 18 14:26 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 14:26 : client: [0] opened from [::1]:49306
+Sep 18 14:27 : player: played "Black Clover Ending 6.m4a"
+Sep 18 14:29 : client: [0] closed
+Sep 18 14:29 : player: played "Black Clover Ending 8.m4a"
+Sep 18 14:29 : client: [1] opened from [::1]:49362
+Sep 18 14:48 : player: played "Black Clover Ending 2.m4a"
+Sep 18 14:51 : player: played "Black Clover Ending 8.m4a"
+Sep 18 14:53 : player: played "Black Clover Ending 2.m4a"
+Sep 18 14:59 : player: played "Black Clover Opening 10.m4a"
+Sep 18 15:03 : player: played "Black Clover Opening 12.m4a"
+Sep 18 15:06 : player: played "Black Clover Ending 6.m4a"
+Sep 18 15:08 : player: played "Black Clover Ending 8.m4a"
+Sep 18 15:10 : client: [1] closed
+Sep 18 15:10 : player: played "Black Clover Ending 2.m4a"
+Sep 18 15:40 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 15:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 15:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 15:40 : client: [0] opened from [::1]:50448
+Sep 18 15:41 : player: played "Black Clover Opening 10.m4a"
+Sep 18 15:43 : client: [0] closed
+Sep 18 15:43 : client: [1] opened from [::1]:50476
+Sep 18 15:43 : client: [1] closed
+Sep 18 15:43 : client: [2] opened from [::1]:50478
+Sep 18 15:45 : client: [2] closed
+Sep 18 15:45 : client: [3] opened from [::1]:50536
+Sep 18 15:45 : client: [3] closed
+Sep 18 15:45 : client: [4] opened from [::1]:50542
+Sep 18 15:47 : player: played "Black Clover Ending 2.m4a"
+Sep 18 15:47 : client: [4] closed
+Sep 18 15:47 : client: [5] opened from [::1]:50552
+Sep 18 15:48 : client: [5] closed
+Sep 18 15:48 : client: [6] opened from [::1]:50554
+Sep 18 15:48 : client: [6] closed
+Sep 18 15:48 : client: [7] opened from [::1]:50556
+Sep 18 15:48 : client: [7] closed
+Sep 18 15:48 : client: [8] opened from [::1]:50558
+Sep 18 15:50 : player: played "Black Clover Ending 8.m4a"
+Sep 18 16:23 : player: played "Black Clover Opening 11.m4a"
+Sep 18 16:23 : exception: Failed to open audio output
+Sep 18 16:25 : client: [8] closed
+Sep 18 16:25 : player: played "Black Clover Ending 8.m4a"
