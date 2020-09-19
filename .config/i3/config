@@ -23,11 +23,11 @@ set $refresh_i3status killall -SIGUSR1 i3status
 # brightness controls
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 5
-bindsym XF86AudioMute exec pamixer -t
 
 # volume controls
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioRaiseVolume exec pamixer -t 5
+bindsym XF86AudioMute exec pamixer -t
 
 # lock screen
 bindsym $mod+x exec i3lock -i "Pictures/Wallpapers/wallpaper.png"
