@@ -1,5 +1,5 @@
 #!/bin/bash
 available=$(free -h | grep Mem: | awk '{print $7}' | sed 's/\Gi//g')
 x=$(perl -E "say 100-(($available*1000)/37.18)")
-z="${x:0:2}%"
-echo $z
+z="${x:0:2}"
+echo $z%
