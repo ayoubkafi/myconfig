@@ -1,5 +1,6 @@
 #!/bin/bash
+size=37.18
 available=$(free -h | grep Mem: | awk '{print $7}' | sed 's/\Gi//g')
-x=$(perl -E "say 100-(($available*1000)/37.18)")
+x=$(perl -E "say 100-(($available*1000)/$size)")
 z="${x:0:2}"
 echo $z%
