@@ -7,7 +7,7 @@
 
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-# Please see file:///usr/share/doc/i3/userguide.html for a coplete referenc!
+# Please see file:///usr/share/doc/i3/userguide.html for a coplete reference!
 
 # super
 set $mod Mod4
