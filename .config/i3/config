@@ -176,21 +176,22 @@ bar {
   position top
   height 27
   workspace_min_width 35
-  separator_symbol /
+  separator_symbol ❮
   #font pango:JetBrainsMonoMedium 12
-  font pango:cascadiacode 14
+  font pango:cascadiacode Medium 14
 
   colors {
     background #262626
     statusline #999999
     #separator #666666
-    separator #ffffff
+    separator #b8bb26
 
-    focused_workspace  #C26B0B #C26B0B #ffffff
-    active_workspace   #5f676a #5f676a #ffffff
-    inactive_workspace #262626 #262626 #BBBBBB
-    urgent_workspace   #900000 #900000 #ffffff
-    binding_mode       #900000 #900000 #ffffff
+    #focused_workspace  #C26B0B #C26B0B #ffffff
+    focused_workspace   #282828 #282828 #fe8019
+    active_workspace    #5f676a #5f676a #ffffff
+    inactive_workspace  #282828 #282828 #BBBBBB
+    urgent_workspace    #900000 #900000 #ffffff
+    binding_mode        #900000 #900000 #ffffff
   }
 }
 
