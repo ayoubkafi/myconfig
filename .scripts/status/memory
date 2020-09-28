@@ -1,3 +1,4 @@
 #!/bin/bash
 
-free | grep Mem | awk {'printf (($3+$5)*100)/$2'} | sed 's/\..*//g' && echo "%"
+#free | grep Mem | awk {'printf (($3+$5)*100)/$2'} | sed 's/\..*//g' && echo "%"
+free | grep Mem | awk {'printf 100-(($7*100)/$2)'} | sed 's/\..*//g' && echo "%"
