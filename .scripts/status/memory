@@ -1,6 +1,3 @@
 #!/bin/bash
-size=37.18
-available=$(free -h | grep Mem: | awk '{print $7}' | sed 's/\Gi//g')
-x=$(perl -E "say 100-(($available*1000)/$size)")
-z="${x:0:2}"
-echo $z%
+
+free | grep Mem | awk {'printf (($3+$5)*100)/$2'} | sed 's/\..*//g' && echo "%"
