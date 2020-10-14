@@ -3,13 +3,14 @@
 while [ true ]
 do
   #date=$(date "+%Y/%m/%d %I:%M")
-  date=$(echo $(date | awk '{print $1}') $(date "+%I:%M"))
+  date=$(echo $(date | awk '{print $1" "$2" "$3}') $(date "+%I:%M"))
   wifi=$(. $HOME/.scripts/status/wifi)
   memory=$(. $HOME/.scripts/status/memory)
   brightness=$(echo "$(xbacklight | grep -o -P '(?<=).*(?=\.)')")
   volume=$(pamixer --get-volume)
   battery=$(. $HOME/.scripts/status/battery)
+  temp=$(sensors | awk '/Core 0/ {printf $3}')
   layout=$(. $HOME/.scripts/status/layout)
-  xsetroot -name " $layout / BA $battery / V $volume% / BR $brightness% / RAM $memory / wifi $wifi / $date "
+  xsetroot -name " $layout ❮ $battery ❮ $temp ❮ V $volume% ❮ BR $brightness% ❮ RAM $memory ❮ wifi $wifi ❮ $date "
   sleep 1
 done

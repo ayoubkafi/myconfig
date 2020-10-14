@@ -1,2 +1,3 @@
 #!/bin/bash
+
 echo $(xbacklight | grep -o -P '(?<=).*(?=\.)')%

@@ -4,7 +4,7 @@ d=$(date "+%d/%m/%Y")
 t=$(echo $(date | awk '{print $1}') $(date "+%I:%M"))
 
 date=$t
-# this for i3blocks 
+
 case $BLOCK_BUTTON in
  1) ;;
  2) ;;
@@ -15,4 +15,5 @@ case $BLOCK_BUTTON in
 esac
 
 echo $date
+
 #echo $(date | awk '{print $1" "$2" "$3}') $(date "+%I:%M")

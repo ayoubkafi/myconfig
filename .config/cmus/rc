@@ -1,0 +1,6 @@
+unbind common +
+unbind common =
+unbind common -
+bind common + vol +5%
+bind common = vol +5%
+bind common - vol -5%

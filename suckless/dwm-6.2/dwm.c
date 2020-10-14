@@ -113,7 +113,7 @@ typedef struct {
 } Layout;
 
 struct Monitor {
-	char ltsymbol[16];
+  char ltsymbol[16];
 	float mfact;
 	int nmaster;
 	int num;

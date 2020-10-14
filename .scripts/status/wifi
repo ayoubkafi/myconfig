@@ -1,5 +1,5 @@
 #!/bin/bash
-x=$(iwconfig | grep "wlo1" | awk '{print $4}' | grep -o -P '(?<=").*(?=")')
+x=$(iwconfig wlan0 | grep "wlan0" | awk '{print $4}' | grep -o -P '(?<=").*(?=")')
 z=${#x}
 
 #if [ $z -lt 1 ]; then

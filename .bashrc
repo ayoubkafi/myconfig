@@ -3,17 +3,23 @@
 #c && neofetch --disable term_font  gpu icons theme model  --color_blocks off --colors 1 3 3 4 7 3 --ascii_distro Linux
 
 #PS1="\[\033[0;32m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\]:\[\033[0;34m\]\W\[\033[0;31m\] > \[\e[m\]"
-PS1="\[\033[0;34m\]\W\[\033[0;32m\] > \[\e[m\]"
+PS1="\[\033[0;34m\]\W\[\033[0;32m\] ❯ \[\e[m\]"
 
 # Ayoub Alias
 alias c='clear'
 alias e='exit'
 alias sp='sudo pacman'
+
+alias l='ls -F --color=auto'
+alias ls='ls --color=auto'
+alias la='ls -aF --color=auto'
 alias ll='lsd -l'
-#alias l='lsd -l'
-#alias ls='lsd -l'
-alias la='ls -aF'
 alias lla='lsd -la'
+
+alias grep='grep --color=auto'
+alias dir='dir --color=auto'
+alias dmesg='dmesg --color=auto'
+
 alias vim='nvim'
 alias v='nvim'
 alias r='ranger'
@@ -21,179 +27,19 @@ alias nc='ncmpcpp'
 alias ccat='highlight --out-format=ansi --force'
 
 #-------- Color Manpages
-export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking
-export LESS_TERMCAP_md=$'\E[01;31m'             # begin bold
-export LESS_TERMCAP_me=$'\E[0m'                 # end mode
-export LESS_TERMCAP_se=$'\E[0m'                 # end standout-mode                 
-export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box                              
-export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
-export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
-#export MANPAGER="/usr/bin/most -s"             # color using most
+export LESS_TERMCAP_mb=$'\E[01;31m'               # begin blinking
+#export LESS_TERMCAP_md=$'\E[01;38;5;74m'          # begin bold
+export LESS_TERMCAP_md=$'\E[01;33m'          # begin bold
+export LESS_TERMCAP_me=$'\E[0m'                   # end mode
+export LESS_TERMCAP_se=$'\E[0m'                   # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'            # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'                   # end underline
+#export LESS_TERMCAP_us=$'\E[04;38;5;146m'         # begin underline
+export LESS_TERMCAP_us=$'\E[04;36m'         # begin underline
+#export MANPAGER="/usr/bin/most -s"                # color using most
 
 # tab size
 tabs -2
 
-# lf icons
-export LF_ICONS="\
-tw=:\
-st=:\
-ow=:\
-dt=:\
-di=:\
-fi=:\
-ln=:\
-or=:\
-ex=:\
-*.c=:\
-*.cc=:\
-*.clj=:\
-*.coffee=:\
-*.cpp=:\
-*.css=:\
-*.d=:\
-*.dart=:\
-*.erl=:\
-*.exs=:\
-*.fs=:\
-*.go=:\
-*.h=:\
-*.hh=:\
-*.hpp=:\
-*.hs=:\
-*.html=:\
-*.java=:\
-*.jl=:\
-*.js=:\
-*.json=:\
-*.lua=:\
-*.md=:\
-*.php=:\
-*.pl=:\
-*.pro=:\
-*.py=:\
-*.rb=:\
-*.rs=:\
-*.scala=:\
-*.ts=:\
-*.vim=:\
-*.cmd=:\
-*.ps1=:\
-*.sh=:\
-*.bash=:\
-*.zsh=:\
-*.fish=:\
-*.tar=:\
-*.tgz=:\
-*.arc=:\
-*.arj=:\
-*.taz=:\
-*.lha=:\
-*.lz4=:\
-*.lzh=:\
-*.lzma=:\
-*.tlz=:\
-*.txz=:\
-*.tzo=:\
-*.t7z=:\
-*.zip=:\
-*.z=:\
-*.dz=:\
-*.gz=:\
-*.lrz=:\
-*.lz=:\
-*.lzo=:\
-*.xz=:\
-*.zst=:\
-*.tzst=:\
-*.bz2=:\
-*.bz=:\
-*.tbz=:\
-*.tbz2=:\
-*.tz=:\
-*.deb=:\
-*.rpm=:\
-*.jar=:\
-*.war=:\
-*.ear=:\
-*.sar=:\
-*.rar=:\
-*.alz=:\
-*.ace=:\
-*.zoo=:\
-*.cpio=:\
-*.7z=:\
-*.rz=:\
-*.cab=:\
-*.wim=:\
-*.swm=:\
-*.dwm=:\
-*.esd=:\
-*.jpg=:\
-*.jpeg=:\
-*.mjpg=:\
-*.mjpeg=:\
-*.gif=:\
-*.bmp=:\
-*.pbm=:\
-*.pgm=:\
-*.ppm=:\
-*.tga=:\
-*.xbm=:\
-*.xpm=:\
-*.tif=:\
-*.tiff=:\
-*.png=:\
-*.svg=:\
-*.svgz=:\
-*.mng=:\
-*.pcx=:\
-*.mov=:\
-*.mpg=:\
-*.mpeg=:\
-*.m2v=:\
-*.mkv=:\
-*.webm=:\
-*.ogm=:\
-*.mp4=:\
-*.m4v=:\
-*.mp4v=:\
-*.vob=:\
-*.qt=:\
-*.nuv=:\
-*.wmv=:\
-*.asf=:\
-*.rm=:\
-*.rmvb=:\
-*.flc=:\
-*.avi=:\
-*.fli=:\
-*.flv=:\
-*.gl=:\
-*.dl=:\
-*.xcf=:\
-*.xwd=:\
-*.yuv=:\
-*.cgm=:\
-*.emf=:\
-*.ogv=:\
-*.ogx=:\
-*.aac=:\
-*.au=:\
-*.flac=:\
-*.m4a=:\
-*.mid=:\
-*.midi=:\
-*.mka=:\
-*.mp3=:\
-*.mpc=:\
-*.ogg=:\
-*.ra=:\
-*.wav=:\
-*.oga=:\
-*.opus=:\
-*.spx=:\
-*.xspf=:\
-*.pdf=:\
-*.nix=:\
-"
-
+# vi mode
+set -o vi

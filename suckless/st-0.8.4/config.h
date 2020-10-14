@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "cascadiacode:style=Medium:pixelsize=16:antialias=true:autohint=true";
+static char *font = "FantasqueSansMono:style=Bold:pixelsize=17:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -120,14 +120,15 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#ebdbb2",
 	"#282828",
+  
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
@@ -175,8 +176,8 @@ static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	//{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
 	//{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
-	{ NULL,            	Button4, kscrollup,      {.i = 1} },
-	{ NULL,            	Button5, kscrolldown,    {.i = 1} },
+	{ NULL,            Button4, kscrollup,      {.i = 1} },
+	{ NULL,            Button5, kscrolldown,    {.i = 1} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
@@ -198,7 +199,7 @@ static Shortcut shortcuts[] = {
 	//{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
 	{ TERMMOD,              XK_J,           zoom,           {.f = -1} },
-  	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+  { TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },

@@ -1,12 +1,16 @@
 ! xterm
 
-xterm*faceName: xft:cascadiacode:style=Medium:size=12
+!xterm*faceName: xft:cascadiacode:style=Medium:size=12
+xterm*faceName: xft:FantasqueSansMono:style=Bold:size=13
 !xterm*faceSize: 13
 xterm*termName: xterm-256color
 ! copy and past
 xterm*VT100.Translations: #override \
-                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+                Ctrl Shift <Key> V:     insert-selection(CLIPBOARD) \n\
+                Ctrl Shift <Key> C:     copy-selection(CLIPBOARD) \n\
+                Ctrl Shift <Key> j:     smaller-vt-font() \n\
+                Ctrl Shift <Key> k:     larger-vt-font()
+
 
 ! urxvt
 URxvt.scrollBar: false
@@ -15,7 +19,7 @@ URxvt*imLocale: en_US.UTF-8
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 ! font
-URxvt.font: xft:cascadiacode:style=Medium:size=12, \
+URxvt.font: xft:FantasqueSansMono:style=Bold:size=13, \
             xft:JetBrainsMonoMediumNerdFont:style=Medium:size=11, \
             xft:Font Awesome 5 Free:pixelsize=27:minspace=False,
 
@@ -23,3 +27,6 @@ URxvt.font: xft:cascadiacode:style=Medium:size=12, \
 Sxiv.background: #262626
 Sxiv.foreground: #bbbbbb
 Sxiv.font: xft:cascadiacode:style=Medium:size=12
+
+!Xcursor.theme:Adwaita
+Xcursor.size: 40

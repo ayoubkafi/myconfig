@@ -1,0 +1,4 @@
+#!/bin/bash
+#sensors | awk '/Core 0/ {printf $3}'
+#sensors | awk '/Core 0/ {printf $3}' | sed -e 's/+\(.*\)C/\1/'
+sensors | awk '/Core 0/ {printf $3}' | sed -e 's/+\(.*\)\..../\1/' && echo "°C"

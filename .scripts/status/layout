@@ -1,11 +1,9 @@
 #!/bin/bash
-x=$($HOME/.scripts/status/xkblayout-state print "%n")
-x=${x:0:2}
 
-if [ $x = "Fr" ]; then
-  x="fr"
-else
-  x="ar"
-fi
-
-echo $x
+case "$(xset -q|grep LED| awk '{ print $10 }')" in
+  "00000000") KB="fr" ;;
+  "00000001") KB="fr" ;;
+  "00001000") KB="ar" ;;
+  "00001001") KB="ar" ;;
+esac
+printf $KB

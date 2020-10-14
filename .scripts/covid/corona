@@ -1,0 +1,18 @@
+#!/bin/bash
+
+covid="/home/ayoub/.scripts/covid/covid"
+curl https://corona-stats.online/DZ > $covid
+totalCase=$(cat $covid | grep DZ | awk {'print $7'})
+newCase=$(cat $covid | grep DZ | awk {'print $9'})
+totalDeath=$(cat $covid | grep DZ | awk {'print $12'})
+newDeath=$(cat $covid | grep DZ | awk {'print $14'})
+recovered=$(cat $covid | grep DZ | awk {'print $17'})
+active=$(cat $covid | grep DZ | awk {'print $19'})
+clear
+echo "total cases : $totalCase"
+echo "new   cases : $newCase"
+echo "total death : $totalDeath"
+echo "new   death : $newDeath"
+echo "recovered   : $recovered"
+echo "active      : $active"
+
