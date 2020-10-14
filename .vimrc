@@ -28,6 +28,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'lilydjwg/colorizer'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'ajh17/vimcompletesme'
+Plugin 'townk/vim-autoclose'
+"Plugin 'ervandew/supertab'
 
 call vundle#end()
 filetype plugin indent on    " required
