@@ -28,5 +28,5 @@ Sxiv.background: #262626
 Sxiv.foreground: #bbbbbb
 Sxiv.font: xft:cascadiacode:style=Medium:size=12
 
-!Xcursor.theme:Adwaita
+Xcursor.theme: Adwaita
 Xcursor.size: 40
