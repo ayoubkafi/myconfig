@@ -15,7 +15,7 @@ set $mod Mod4
 set $alt Mod1
 
 # Font 
-font pango:cascadiacode 8
+font pango:cascadiacode bold 10
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -26,12 +26,12 @@ bindsym XF86MonBrightnessUp   exec xbacklight -inc 5
 
 # volume controls
 bindsym XF86AudioLowerVolume exec pamixer -d 5
-bindsym XF86AudioRaiseVolume exec pamixer -t 5
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioMute exec pamixer -t
 
 # lock screen
-bindsym $mod+x exec i3lock -i "Pictures/Wallpapers/wallpaper.png"
-#bindsym $mod+x exec betterlockscreen -l dim
+#bindsym $mod+x exec i3lock -i "Pictures/Wallpapers/ArchGruvbox.png"
+bindsym $mod+x exec betterlockscreen -l dim
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -74,9 +74,13 @@ bindsym $mod+Shift+Right  move right
 
 # toogle split
 bindsym $mod+v split toggle
+# bindsym $mod+a split off
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+set $hiden=false
+bindsym $mod+Shift+f exec . $HOME/sh.sh
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -169,6 +173,9 @@ bindsym $mod+Control+j move down 10
 bindsym $mod+Control+k move up 10
 bindsym $mod+Control+L move right 10
 
+# screen shot
+bindsym $mod+Shift+s exec . $HOME/.scripts/shot
+
 # status bar
 bar {
   #status_command i3status -c ~/.config/i3status/i3status.conf
@@ -177,11 +184,11 @@ bar {
   height 27
   workspace_min_width 35
   separator_symbol ❮
-  #font pango:JetBrainsMonoMedium 12
+  ##font pango:JetBrainsMonoMedium 12
   font pango:cascadiacode Medium 14
 
   colors {
-    background #262626
+    background #282828
     statusline #999999
     #separator #666666
     separator #b8bb26
@@ -214,6 +221,6 @@ gaps outer 1
 
 #client.background       #ffffff
 
-client.focused    #555555 #555555 #ffffff #2e9ef4 #C26B0B
+client.focused    #fe8019 #fe8019 #ffffff #2e9ef4 #fe8019
 client.unfocused  #555555 #555555 #ffffff #2e9ef4 #555555
 
