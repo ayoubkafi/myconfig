@@ -568,7 +568,7 @@ hi! link lCursor Cursor
 " Syntax Highlighting: {{{
 
 if g:gruvbox_improved_strings == 0
-  hi! link Special GruvboxOrange
+  hi! link Special GruvboxRed
 else
   call s:HL('Special', s:orange, s:bg1, s:italicize_strings)
 endif
@@ -594,6 +594,7 @@ hi! link Keyword GruvboxRed
 
 " Variable name
 hi! link Identifier GruvboxBlue
+
 " Function name
 hi! link Function GruvboxGreenBold
 
@@ -614,7 +615,7 @@ hi! link Constant GruvboxPurple
 hi! link Character GruvboxPurple
 " String constant: "this is a string"
 if g:gruvbox_improved_strings == 0
-  call s:HL('String',  s:green, s:none, s:italicize_strings)
+  call s:HL('String',  s:yellow, s:none, s:italicize_strings)
 else
   call s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
 endif
@@ -1023,7 +1024,24 @@ hi! link clojureUnquote GruvboxYellow
 " }}}
 " C: {{{
 
-hi! link cOperator GruvboxPurple
+syn match cCustomFunc /\w\+\s*(/me=e-1,he=e-1
+
+syn match cOperator "\(<<\|>>\|[-+*/%&^|<>!=]\)="
+syn match cOperator "<<\|>>\|&&\|||\|++\|--\|->"
+syn match cOperator "[.!~*&%<>^|=,+-]"
+syn match cOperator "/[^/*=]"me=e-1
+syn match cOperator "/$"
+syn match cOperator "&&\|||"
+syn match cOperator "[][]"
+
+syn match cBraces display "[{}]"
+syn match cDelimiter    "[();\\]"
+
+hi! link cCustomFunc GruvboxGreen
+hi! link cOperator GruvboxBlue
+hi! link cDelimiter GruvboxWhite
+hi! link cBraces GruvboxWhite
+"""""""""""""""""""""""""""""""""""""""""
 hi! link cStructure GruvboxOrange
 
 " }}}
