@@ -1,7 +1,9 @@
 #!/bin/bash
 
+folder="$HOME/Pictures/screenshots"
+
 file=$(ls $HOME/Pictures/shot)
-if [ $file != "$HOME/Pictures/shot" ]; then
+if [ $file != "$folder/shot" ]; then
   imlib2_grab shot$n.png
   notify-send "Done"
   exit
@@ -11,12 +13,12 @@ n=1
 while true
 do
   file=$(ls $HOME/Pictures/shot$n.png)
-  file2="$HOME/Pictures/shot$n.png"
+  file2="$folder/shot$n.png"
   if [ "$file" != "$file2" ]; then
     break
   fi
   n=$((n+1))
 done
 
-imlib2_grab $HOME/Pictures/shot$n.png
+imlib2_grab $folder/shot$n.png
 notify-send "Done"
