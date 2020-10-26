@@ -3,7 +3,8 @@
 #c && neofetch --disable term_font  gpu icons theme model  --color_blocks off --colors 1 3 3 4 7 3 --ascii_distro Linux
 
 #PS1="\[\033[0;32m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\]:\[\033[0;34m\]\W\[\033[0;31m\] > \[\e[m\]"
-PS1="\[\033[0;34m\]\W\[\033[0;32m\] ❯ \[\e[m\]"
+# → | ❯ | >
+PS1="\[\033[0;34m\]\W\[\033[0;32m\] → \[\e[m\]"
 
 # Ayoub Alias
 alias c='clear'
@@ -15,6 +16,8 @@ alias ls='ls --color=auto'
 alias la='ls -aF --color=auto'
 alias ll='lsd -l'
 alias lla='lsd -la'
+
+alias cmus='echo "no music"'
 
 alias grep='grep --color=auto'
 alias dir='dir --color=auto'
