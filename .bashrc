@@ -17,8 +17,6 @@ alias la='ls -aF --color=auto'
 alias ll='lsd -l'
 alias lla='lsd -la'
 
-alias cmus='echo "no music"'
-
 alias grep='grep --color=auto'
 alias dir='dir --color=auto'
 alias dmesg='dmesg --color=auto'
