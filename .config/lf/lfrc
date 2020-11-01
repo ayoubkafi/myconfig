@@ -69,7 +69,6 @@ cmd nvim ${{
 
 
 # maping
-map H cd ~
 
 map <space> toggle
 #map <c-j> :toggle;down
