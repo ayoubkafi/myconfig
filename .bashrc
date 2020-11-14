@@ -13,9 +13,8 @@ alias sp='sudo pacman'
 
 alias l='ls -F --color=auto'
 alias ls='ls --color=auto'
-alias la='ls -aF --color=auto'
+alias la='lsd -la --icon never'
 alias ll='lsd -l --icon never'
-alias lla='lsd -la --icon never'
 
 alias grep='grep --color=auto'
 alias dir='dir --color=auto'
