@@ -14,8 +14,8 @@ alias sp='sudo pacman'
 alias l='ls -F --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -aF --color=auto'
-alias ll='lsd -l'
-alias lla='lsd -la'
+alias ll='lsd -l --icon never'
+alias lla='lsd -la --icon never'
 
 alias grep='grep --color=auto'
 alias dir='dir --color=auto'
@@ -26,6 +26,7 @@ alias v='nvim'
 alias r='ranger'
 alias nc='ncmpcpp'
 alias ccat='highlight --out-format=ansi --force'
+alias n='nnn -Rd'
 
 #-------- Color Manpages
 export LESS_TERMCAP_mb=$'\E[01;31m'               # begin blinking
