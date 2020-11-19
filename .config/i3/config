@@ -187,23 +187,22 @@ bar {
   position top
   height 27
   workspace_min_width 34
-  mode hide
-  hidden_state hide
+  #mode hide
+  #hidden_state hide
   modifier $mod+Shift
   separator_symbol ❮
   ##font pango:JetBrainsMonoMedium 12
   font pango:cascadiacode Medium 15
 
   colors {
-    background #282828
+    background #2E3440
     statusline #999999
-    #separator #666666
-    separator #b8bb26
+    separator #BF616A
 
     #focused_workspace  #C26B0B #C26B0B #ffffff
-    focused_workspace   #282828 #282828 #fe8019
+    focused_workspace   #2E3440 #2E3440 #5E81AC
     active_workspace    #5f676a #5f676a #ffffff
-    inactive_workspace  #282828 #282828 #BBBBBB
+    inactive_workspace  #2E3440 #2E3440 #BBBBBB
     urgent_workspace    #900000 #900000 #ffffff
     binding_mode        #900000 #900000 #ffffff
   }
@@ -228,5 +227,7 @@ gaps outer 2
 
 #client.background       #ffffff
 
-client.focused    #d65d0e #d65d0e #ffffff #2e9ef4 #d65d0e
-client.unfocused  #555555 #555555 #ffffff #2e9ef4 #555555
+# gruvbox
+client.focused      #bbbbbb #bbbbbb #ffffff #BF616A #bbbbbb
+client.unfocused    #434C5E #434C5E #ffffff #BF616A #434C5E
+

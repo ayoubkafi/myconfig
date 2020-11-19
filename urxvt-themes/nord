@@ -23,25 +23,25 @@
 #define nord14 #A3BE8C
 #define nord15 #B48EAD
 
-xterm*foreground:   nord4
-xterm*background:   nord0
-xterm*cursorColor:  nord4
-xterm*fading: 35
-xterm*fadeColor: nord3
-
-xterm*color0: nord1
-xterm*color1: nord11
-xterm*color2: nord14
-xterm*color3: nord13
-xterm*color4: nord9
-xterm*color5: nord15
-xterm*color6: nord8
-xterm*color7: nord5
-xterm*color8: nord3
-xterm*color9: nord11
-xterm*color10: nord14
-xterm*color11: nord13
-xterm*color12: nord9
-xterm*color13: nord15
-xterm*color14: nord7
-xterm*color15: nord6
+URxvt.foreground:   nord4
+URxvt.background:   nord0
+URxvt.cursorColor:  nord4
+URxvt.fading: 35
+URxvt.fadeColor: nord3
+URxvt
+URxvt.color0: nord1
+URxvt.color1: nord11
+URxvt.color2: nord14
+URxvt.color3: nord13
+URxvt.color4: nord9
+URxvt.color5: nord15
+URxvt.color6: nord8
+URxvt.color7: nord5
+URxvt.color8: nord3
+URxvt.color9: nord11
+URxvt.color10: nord14
+URxvt.color11: nord13
+URxvt.color12: nord9
+URxvt.color13: nord15
+URxvt.color14: nord7
+URxvt.color15: nord6

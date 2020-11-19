@@ -13,11 +13,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'morhetz/gruvbox'
-Plugin 'mhartington/oceanic-next'
+"Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'sainnhe/vim-color-forest-night'
+Plugin 'dracula/vim'
+"Plugin 'c.vim'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'dart-lang/dart-vim-plugin'
+"Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'itchyny/lightline.vim' 
 Plugin 'vifm/vifm.vim' 
 Plugin 'yggdroot/indentline'
@@ -26,10 +30,12 @@ Plugin 'honza/vim-snippets'
 Plugin 'wikitopian/hardmode'
 Plugin 'mattn/emmet-vim'
 Plugin 'lilydjwg/colorizer'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+"Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'ajh17/vimcompletesme'
-Plugin 'townk/vim-autoclose'
+"Plugin 'valloric/youcompleteme'
+"Plugin 'townk/vim-autoclose'
 "Plugin 'ervandew/supertab'
+"Plugin 'neoclide/coc.nvim'
 
 call vundle#end()
 filetype plugin indent on    " required
@@ -38,10 +44,11 @@ filetype plugin indent on    " required
 syntax on
 
 " Set Theme
-colorscheme gruvbox
+colorscheme nord
 set background=dark
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
+
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 
 set noerrorbells
 " tabs
@@ -56,7 +63,7 @@ set number " number line
 "set smartindent
 set incsearch " highlight only first search when typing
 set hlsearch " highlight all search after pres Enter
-"set cursorline
+set cursorline
 "set cursorcolumn
 set laststatus=2 " lightline
 set noshowmode " hiddin mode name under status bar
@@ -90,4 +97,14 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 let g:user_emmet_leader_key='<C-Z>'
 
 " indent line
-let g:indentLine_setConceal = 0
+let g:indentLine_setConceal = 1
+let g:indentLine_char = '|'
+
+
+"let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=green ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=0
+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }

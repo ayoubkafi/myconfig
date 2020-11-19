@@ -46,4 +46,7 @@ tabs -2
 set -o vi
 
 # gruvbox theme
-. ~/.scripts/gruvbox/gruvbox_256palette_osx.sh
+#. ~/.scripts/gruvbox/gruvbox_256palette_osx.sh
+
+# colors scripts
+.scripts/colorscripts/panes

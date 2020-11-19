@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h>
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -8,16 +9,19 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "cascadiacode:size=13" , "JetBrainsMonoMediumNerdFont:size=14"};
 //static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-//static const char col_cyan[]        = "#005577";
-static const char col_cyan[]        = "#fe8019";
+//
+static const char COLOR_NORM_FG[]     = "#bbbbbb";
+static const char COLOR_NORM_BG[]     = "#2E3440";
+static const char COLOR_NORM_BORDER[] = "#434C5E";
+
+static const char COLOR_SEL_FG[]      = "#bbbbbb";
+static const char COLOR_SEL_BG[]      = "#5E81AC";
+static const char COLOR_SEL_BORDER[]  = "#bbbbbb";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { COLOR_NORM_FG, COLOR_NORM_BG , COLOR_NORM_BORDER },
+	[SchemeSel]  = { COLOR_SEL_FG , COLOR_SEL_BG  , COLOR_SEL_BORDER  },
 };
 
 /* tagging */
@@ -65,11 +69,22 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p", "Run :", NULL };
-static const char *termcmd[]  = { "term", NULL };
-static const char *quitcmd[]  = { "quitdwm" };
-static const char *shutdowncmd[]  = { "Ashutdown" };
-static const char *rebootcmd[]  = { "Areboot" };
+
+static const char *dmenucmd[]         = { "dmenu_run", "-p", "Run :", NULL };
+static const char *termcmd[]          = { "term", NULL };
+static const char *lockcmd[]          = { "slock", NULL };
+static const char *shutdowncmd[]      = { "Ashutdown", NULL };
+static const char *rebootcmd[]        = { "Areboot", NULL };
+/* brightness */
+static const char *brightness_up[]    = { "xbacklight", "-inc", "5", NULL };
+static const char *brightness_down[]  = { "xbacklight", "-dec", "5", NULL };
+/* audio */
+static const char *audio_up[]         = { "pamixer", "-i", "5", NULL };
+static const char *audio_down[]       = { "pamixer", "-d", "5", NULL };
+static const char *audio_mute[]       = { "pamixer", "-t", NULL };
+/* browser */
+//static const char *browser[]          = { "firefox", NULL };
+//static const char *messenger[]        = { "firefox", "--new-tab", "gmail.com", NULL };
 
 static Key keys[] = {
   /* modifier                     key        function        argument */
@@ -82,12 +97,12 @@ static Key keys[] = {
   { MODKEY,                       XK_k,       focusstack,     {.i = -1 } },
   
   { MODKEY,                       XK_i,       incnmaster,     {.i = +1 } },
-  //{ MODKEY,                       XK_d,       incnmaster,     {.i = -1 } },
+  { MODKEY,                       XK_o,       incnmaster,     {.i = -1 } },
   
   { MODKEY,                       XK_h,       setmfact,       {.f = -0.01} },
   { MODKEY,                       XK_l,       setmfact,       {.f = +0.01} },
   
-  { MODKEY|ShiftMask,                         XK_Return, zoom,           {0} },
+  { MODKEY|ShiftMask,             XK_Return,  zoom,           {0} },
   { MODKEY,                       XK_Tab,     view,           {0} },
   { MODKEY,                       XK_q,       killclient,     {0} },
   
@@ -97,8 +112,8 @@ static Key keys[] = {
   { MODKEY,                       XK_space,   setlayout,      {0} },
   
   { MODKEY|ShiftMask,             XK_space,   togglefloating, {0} },
-  { MODKEY,                       XK_0,       view,           {.ui = ~0 } },
-  { MODKEY|ShiftMask,             XK_0,       tag,            {.ui = ~0 } },
+  { MODKEY,                       XK_agrave,       view,           {.ui = ~0 } },
+  { MODKEY|ShiftMask,             XK_agrave,       tag,            {.ui = ~0 } },
   
   { MODKEY,                       XK_comma,   focusmon,       {.i = -1 } },
   { MODKEY,                       XK_period,  focusmon,       {.i = +1 } },
@@ -121,9 +136,19 @@ static Key keys[] = {
   TAGKEYS(                        XK_ccedilla,                        8)
   //TAGKEYS(                        XK_agrave,                          9)
   
-  { ALTKEY|CTRL,             XK_q,      spawn,           {.v = quitcmd } },
+  { ALTKEY|CTRL,             XK_q,      quit,            {0} },
   { ALTKEY|CTRL,             XK_s,      spawn,           {.v = shutdowncmd } },
   { ALTKEY|CTRL,             XK_r,      spawn,           {.v = rebootcmd } },
+
+  { MODKEY,                       XK_x,  spawn,          {.v = lockcmd } },
+
+  //{ 0,                       XF86XK_WWW,                spawn,          {.v = browser } },
+  //{ 0,                       XF86XK_Messenger,          spawn,          {.v = messenger } },
+  { 0,                       XF86XK_AudioRaiseVolume,   spawn,          {.v = audio_up } },
+  { 0,                       XF86XK_AudioLowerVolume,   spawn,          {.v = audio_down } },
+  { 0,                       XF86XK_AudioMute,          spawn,          {.v = audio_mute } },
+  { 0,                       XF86XK_MonBrightnessUp,    spawn,          {.v = brightness_up } },
+  { 0,                       XF86XK_MonBrightnessDown,  spawn,          {.v = brightness_down } },
 };
 
 /* button definitions */

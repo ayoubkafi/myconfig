@@ -1,3 +1,0 @@
-#!/bin/bash
-cp ~/.S/i3/.xinitrc ~/.xinitrc
-startx
