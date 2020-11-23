@@ -17,7 +17,9 @@ Plugin 'morhetz/gruvbox'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'sainnhe/vim-color-forest-night'
 Plugin 'dracula/vim'
-"Plugin 'c.vim'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'neoclide/coc.nvim'
+Plugin 'weirongxu/coc-explorer'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -44,7 +46,7 @@ filetype plugin indent on    " required
 syntax on
 
 " Set Theme
-colorscheme nord
+colorscheme gruvbox
 set background=dark
 
 let g:solarized_termcolors=256
@@ -94,7 +96,9 @@ let g:HardMode_hardmodeMsg = 'Don''t use this!'
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " ### EMMET ###
-let g:user_emmet_leader_key='<C-Z>'
+"let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " indent line
 let g:indentLine_setConceal = 1
@@ -106,5 +110,5 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=green ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=0
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'gruvbox',
       \ }
