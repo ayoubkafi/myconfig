@@ -4,7 +4,8 @@
 
 #PS1="\[\033[0;32m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\]:\[\033[0;34m\]\W\[\033[0;31m\] > \[\e[m\]"
 # → | ❯ | >
-PS1="\[\033[0;34m\]\W\[\033[0;32m\] → \[\e[m\]"
+#PS1="\[\033[0;34m\]\W\[\033[0;32m\] → \[\e[m\]"
+PS1="\033[0;31m[\033[0;33m\]\u\033[0;32m\]@\033[0;34m\h \033[0;35m\W\033[0;31m]\e[m$ "
 
 # Ayoub Alias
 alias c='clear'
@@ -24,7 +25,7 @@ alias vim='nvim'
 alias v='nvim'
 alias r='ranger'
 alias nc='ncmpcpp'
-alias ccat='highlight --out-format=ansi --force'
+alias cat='highlight --out-format=ansi --force'
 alias n='nnn -Rd'
 
 #-------- Color Manpages
@@ -46,7 +47,8 @@ tabs -2
 set -o vi
 
 # gruvbox theme
-#. ~/.scripts/gruvbox/gruvbox_256palette_osx.sh
+. ~/.scripts/gruvbox/gruvbox_256palette_osx.sh
 
 # colors scripts
-.scripts/colorscripts/panes
+.scripts/colorscripts/alpha
+#.scripts/colorscripts/panes
