@@ -62,11 +62,11 @@ xmodmap ~/.Xmodmap
 # Apply Xresources configs
 xrdb -merge ~/.Xresources
 # Apply terminal theme
-xrdb -override ~/Documents/xterm-themes/nord
-xrdb -override ~/Documents/urxvt-themes/nord
+xrdb -override ~/Documents/xterm-themes/gruvbox-dark
+xrdb -override ~/Documents/urxvt-themes/gruvbox-dark
 # lauche duns
 dunst -font "cascadiacode 12" &
 # set brightness
-xbacklight -set 70
+#xbacklight -set 70
 # launche i3
 exec i3

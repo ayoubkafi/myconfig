@@ -18,21 +18,20 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'sainnhe/vim-color-forest-night'
 Plugin 'dracula/vim'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'neoclide/coc.nvim'
-Plugin 'weirongxu/coc-explorer'
+"Plugin 'neoclide/coc.nvim'
+"Plugin 'weirongxu/coc-explorer'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'itchyny/lightline.vim' 
-Plugin 'vifm/vifm.vim' 
 Plugin 'yggdroot/indentline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'honza/vim-snippets'
 Plugin 'wikitopian/hardmode'
 Plugin 'mattn/emmet-vim'
 Plugin 'lilydjwg/colorizer'
-"Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'ajh17/vimcompletesme'
 "Plugin 'valloric/youcompleteme'
 "Plugin 'townk/vim-autoclose'
@@ -54,10 +53,12 @@ let g:solarized_termtrans=1
 
 set noerrorbells
 " tabs
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab " allow to use tabs
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set list
+set lcs=tab:..
+"set expandtab " allow to use tabs
 set number " number line
 "set nowrap
 "set ignorecase
@@ -68,6 +69,7 @@ set hlsearch " highlight all search after pres Enter
 set cursorline
 "set cursorcolumn
 set laststatus=2 " lightline
+set guicursor+=i:blinkwait10
 set noshowmode " hiddin mode name under status bar
 "set mouse=a
 nmap <c-l> :noh <CR>
@@ -77,14 +79,14 @@ let g:NERDTreeWinSize=30 " window size
 nmap <c-n> :NERDTreeToggle <CR>
 
 augroup filetype_nerdtree
-    au!
-    au FileType nerdtree call s:disable_lightline_on_nerdtree()
-    au WinEnter,BufWinEnter,TabEnter * call s:disable_lightline_on_nerdtree()
+	au!
+	au FileType nerdtree call s:disable_lightline_on_nerdtree()
+	au WinEnter,BufWinEnter,TabEnter * call s:disable_lightline_on_nerdtree()
 augroup END
 
 fu s:disable_lightline_on_nerdtree() abort
-    let nerdtree_winnr = index(map(range(1, winnr('$')), {_,v -> getbufvar(winbufnr(v), '&ft')}), 'nerdtree') + 1
-    call timer_start(0, {-> nerdtree_winnr && setwinvar(nerdtree_winnr, '&stl', '%#Normal#')})
+	let nerdtree_winnr = index(map(range(1, winnr('$')), {_,v -> getbufvar(winbufnr(v), '&ft')}), 'nerdtree') + 1
+	call timer_start(0, {-> nerdtree_winnr && setwinvar(nerdtree_winnr, '&stl', '%#Normal#')})
 endfu
 
 " close vim if the only window left open is a NERDTree
@@ -97,8 +99,8 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " ### EMMET ###
 "let g:user_emmet_leader_key='<C-Z>'
-let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_expandabbr_key='<c-j>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<c-j>")
 
 " indent line
 let g:indentLine_setConceal = 1
@@ -109,6 +111,6 @@ let g:indentLine_char = '|'
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=green ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=0
 
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
+"let g:lightline = {
+"			\ 'colorscheme': 'gruvbox',
+"			\ }

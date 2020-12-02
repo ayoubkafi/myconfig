@@ -1,9 +1,9 @@
 #!/bin/sh
 
 export HOSTNAME$(hostname)
-export TERM=xterm
-export EDITOR=nvim
-export BROWSER=firefox
+export term="xterm"
+export EDITOR="nvim"
+export BROWSER="firefox"
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap

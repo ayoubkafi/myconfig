@@ -1,9 +1,9 @@
 #!/bin/sh
 
 export HOSTNAME=$(hostname)
-export term=xterm
-export EDITOR=nvim
-export BROWSER=firefox
+export term="st"
+export EDITOR="nvim"
+export BROWSER="firefox"
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -48,7 +48,7 @@ xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 40
 # set speed
 xset r rate 300 55
 # launche picom
-picom -f &
+# picom -f &
 # set layout and config it
 setxkbmap -option grp:alt_shift_toggle fr,ar
 # Set wallpaper
@@ -58,12 +58,12 @@ xmodmap ~/.Xmodmap
 # Apply Xresources configs
 xrdb -merge ~/.Xresources
 # Apply terminal theme
-xrdb -override ~/Documents/xterm-themes/nord
-xrdb -override ~/Documents/urxvt-themes/nord
+xrdb -override ~/Documents/xterm-themes/gruvbox-dark
+xrdb -override ~/Documents/urxvt-themes/gruvbox-dark
 # launche dunst
 dunst -font "SF Mono" &
 # dwmbar
 #setsid -f dwmbar >/dev/null 2>&1
 #setsid -f dwmblocks >/dev/null 2>&1
-# launche bspwm
+# launche dwm
 exec dwm
